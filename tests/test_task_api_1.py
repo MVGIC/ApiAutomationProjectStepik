@@ -19,7 +19,7 @@ class TestOneJokeFromEachCategory:
             assert result.status_code == 200, "Неудача! Запрос вернул ошибку."
             print(f"Ваша шутка: {result.json()}")
             print(f"Успех! Мы получили рандомную шутку по категории - {category}.")
-            print("Следующая шутка")
+            print("-----------")
 
 
 randon_joke_in_category = TestOneJokeFromEachCategory()
