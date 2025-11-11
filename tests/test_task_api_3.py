@@ -1,7 +1,7 @@
 import requests
 
 
-#Урок 6.9
+# Урок 6.9
 class TestNewLocation:
     """Работа с новой локацией"""
 
