@@ -1,6 +1,7 @@
 import requests
 
 
+# Урок 6.5
 class TestOneJokeFromSelectedCategory:
     """Класс, в котором получаем одну рандомную шутку по выбранной категории"""
 
