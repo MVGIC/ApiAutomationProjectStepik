@@ -15,7 +15,7 @@ def test_get_dart_friends():
     print(dart_films)
 
     """Открываем файл на запись и записываем имена персонажей"""
-    with open("task_5_file.txt", "w", encoding="utf-8") as t_1:
+    with open("task_5_file.txt", "w", encoding="utf-8") as f:
         characters_list = []
         for i in dart_films:
             response_film = requests.get(i) # Отправляем запрос по каждому фильму, в котором снимался Дарт Вейдер
@@ -27,10 +27,9 @@ def test_get_dart_friends():
                 unique_names = set(characters_list) # Оставляем только уникальные значения имен
 
         for name in unique_names:
-            t_1.write(f"{name}\n") # Записываем уникальные имена в файл
+            f.write(f"{name}\n") # Записываем уникальные имена в файл
 
     """Открываем файл на чтение и выводим имена персонажей из файла""" # Если необходимо
-    with open("task_5_file.txt", "r") as tr_1:
-        for name in tr_1.readlines():
-            new_name = name.replace("\n", "") # Избавляемся от переноса строки в файле
-            print(new_name)
+    with open("task_5_file.txt", "r") as f_r:
+        result_read = f_r.read()
+        print(result_read)
